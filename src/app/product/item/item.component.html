@@ -1,13 +1,14 @@
-<h1>Items</h1>
-<div>
-  <ul *ngFor="let item of items">
-    <li><label>Id: </label>{{item.id}}</li>
-    <li><label>Name: </label>{{item.name}}</li>
-    <li><label>Description: </label>{{item.description}}</li>
-    <li><label>Quantity: </label>{{item.quantity}}</li>
-    <li><label>Price: </label>{{item.price}}</li>
-    <li><label>Brand: </label>{{item.brand}}</li>
-    <li><img [src]="item.imageUrl"></li>
-  </ul>
-
+<div style="margin: 1%" *ngFor="let item of items; index as i; even as isEven">
+  <!-- <ng-template [ngIf]="(i+1)%4==0"> <br /> </ng-template> -->
+  <div class="card" style="width: 25%; float:left;">
+    <div class="card text-white bg-info">
+      <h4 class="card-title">
+        <a href="item/{{item.id}}" class="card-link text-black">{{item.name}}</a>
+      </h4>
+      <img class="card-img-top" [src]="item.imageUrl" [alt]="item.name">
+      <div class="card-body">
+        <p class="card-text">{{item.description}}</p>
+      </div>
+    </div>
+  </div>
 </div>
