@@ -1,3 +1,13 @@
-<p>
-  item works!
-</p>
+<h1>Items</h1>
+<div>
+  <ul *ngFor="let item of items">
+    <li><label>Id: </label>{{item.id}}</li>
+    <li><label>Name: </label>{{item.name}}</li>
+    <li><label>Description: </label>{{item.description}}</li>
+    <li><label>Quantity: </label>{{item.quantity}}</li>
+    <li><label>Price: </label>{{item.price}}</li>
+    <li><label>Brand: </label>{{item.brand}}</li>
+    <li><img [src]="item.imageUrl"></li>
+  </ul>
+
+</div>
