@@ -23,4 +23,12 @@ export class ItemComponent implements OnInit {
     return null;
   }
 
+  buy(){
+
+  }
+
+  addToCart(){
+    console.log("Adding to cart.")
+  }
+
 }

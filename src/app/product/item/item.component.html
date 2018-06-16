@@ -1,13 +1,21 @@
 <div style="margin: 1%" *ngFor="let item of items; index as i; even as isEven">
   <!-- <ng-template [ngIf]="(i+1)%4==0"> <br /> </ng-template> -->
-  <div class="card" style="width: 25%; float:left;">
-    <div class="card text-white bg-info">
-      <h4 class="card-title">
-        <a href="item/{{item.id}}" class="card-link text-black">{{item.name}}</a>
-      </h4>
+  <div class="card" style="width: 25%; height: 40%; float:left;">
+    <div class="card text-white bg-primary">
       <img class="card-img-top" [src]="item.imageUrl" [alt]="item.name">
       <div class="card-body">
+        <h4 class="card-title">
+          <a href="item/{{item.id}}" class="card-link">{{item.name}}</a>
+        </h4>
         <p class="card-text">{{item.description}}</p>
+        <div class="row">
+          <div class="pull-left" style="width: 50%">
+            <button class="btn btn-md" (click)="addToCart()">Add to Cart</button>
+          </div>
+          <div class="pull-right" style="width: 50%">
+            <button class="btn btn-md" (onclick)="buy()">Buy</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
