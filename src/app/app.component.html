@@ -1,19 +1,24 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+  
  
 
-   <button mat-button [matMenuTriggerFor]="animals">Animal index</button>
+   <button mat-button [matMenuTriggerFor]="mobiles">Mobiles</button>
+   <button mat-button [matMenuTriggerFor]="mobiles">TV</button>
+   <button mat-button [matMenuTriggerFor]="mobiles">Home Appliances</button>
+   <button mat-button [matMenuTriggerFor]="mobiles">Fashion</button>
+   <button mat-button [matMenuTriggerFor]="mobiles">Sports</button>
 
-<mat-menu #animals="matMenu">
-  <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
-  <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+<mat-menu #mobiles="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="apple">Apple</button>
+  <button mat-menu-item [matMenuTriggerFor]="invertebrates">Motorola</button>
+  <button mat-menu-item [matMenuTriggerFor]="invertebrates">Samsung</button>
+  <button mat-menu-item [matMenuTriggerFor]="invertebrates">MI</button>
+  <button mat-menu-item [matMenuTriggerFor]="invertebrates">Vivo</button>
+  <button mat-menu-item [matMenuTriggerFor]="invertebrates">Oppo</button>
 </mat-menu>
 
-<mat-menu #vertebrates="matMenu">
-  <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+<mat-menu #apple="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="iphone10x">iPhone 10x</button>
   <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
   <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
   <button mat-menu-item>Birds</button>
@@ -30,12 +35,11 @@
   <button mat-menu-item>Horseshoe crabs</button>
 </mat-menu>
 
-<mat-menu #fish="matMenu">
-  <button mat-menu-item>Baikal oilfish</button>
-  <button mat-menu-item>Bala shark</button>
-  <button mat-menu-item>Ballan wrasse</button>
-  <button mat-menu-item>Bamboo shark</button>
-  <button mat-menu-item>Banded killifish</button>
+<mat-menu #iphone10x="matMenu">
+  <button mat-menu-item>32 GB</button>
+  <button mat-menu-item>64 GB</button>
+  <button mat-menu-item>128 GB</button>
+  <button mat-menu-item>256 GB</button>
 </mat-menu>
 
 <mat-menu #amphibians="matMenu">
@@ -53,6 +57,8 @@
   <button mat-menu-item disabled>Velociraptor</button>
 </mat-menu>
 
- 
+<h1>
+  Welcome to {{ title }}!
+</h1>
 <app-spring></app-spring>
 <app-item></app-item>
